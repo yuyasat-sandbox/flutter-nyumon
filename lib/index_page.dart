@@ -7,6 +7,8 @@ import 'sliver_app_bar_page.dart';
 import 'responsive_design_page.dart';
 import 'shrinkable_footer_page.dart';
 
+import 'hero_page.dart';
+
 class IndexPage extends StatelessWidget {
   const IndexPage({
     Key? key,
@@ -79,6 +81,19 @@ class IndexPage extends StatelessWidget {
                 );
               },
               child: const Text('ResponsiveDesignPage'),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) {
+                    return HeroFromPage();
+                  }),
+                );
+              },
+              child: const Text('Hero'),
             ),
           ),
         ],
