@@ -11,6 +11,7 @@ import 'hero_page.dart';
 import 'transition_page.dart';
 import 'open_container_page.dart';
 import 'shared_axis_transition_page.dart';
+import 'animation_controller_page.dart';
 
 class IndexPage extends StatelessWidget {
   const IndexPage({
@@ -136,6 +137,19 @@ class IndexPage extends StatelessWidget {
                 );
               },
               child: const Text('SharedAxisTransition'),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) {
+                    return AnimationControllerPage();
+                  }),
+                );
+              },
+              child: const Text('AnimationController'),
             ),
           ),
         ],
