@@ -8,6 +8,7 @@ import 'responsive_design_page.dart';
 import 'shrinkable_footer_page.dart';
 
 import 'hero_page.dart';
+import 'transition_page.dart';
 
 class IndexPage extends StatelessWidget {
   const IndexPage({
@@ -94,6 +95,19 @@ class IndexPage extends StatelessWidget {
                 );
               },
               child: const Text('Hero'),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) {
+                    return TransitionPage();
+                  }),
+                );
+              },
+              child: const Text('Transition'),
             ),
           ),
         ],
