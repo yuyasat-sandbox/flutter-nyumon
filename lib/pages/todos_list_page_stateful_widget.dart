@@ -14,7 +14,7 @@ class TodosListPageStatefulWidget extends StatefulWidget {
 
 class _TodosListPageStateStatefulWidget
     extends State<TodosListPageStatefulWidget> {
-  final List<Todo> _todos = <Todo>[];
+  final List<TodoStatefulWidget> _todos = <TodoStatefulWidget>[];
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +31,8 @@ class _TodosListPageStateStatefulWidget
                 title: Text(todo.name),
                 onTap: () {
                   setState(() {
-                    _todos[index] =
-                        Todo(isCompleted: !todo.isCompleted, name: todo.name);
+                    _todos[index] = TodoStatefulWidget(
+                        isCompleted: !todo.isCompleted, name: todo.name);
                   });
                 },
                 trailing: todo.isCompleted
@@ -60,7 +60,7 @@ class _TodosListPageStateStatefulWidget
             context: context,
             onAdd: (name) {
               setState(() {
-                _todos.insert(0, Todo(name: name));
+                _todos.insert(0, TodoStatefulWidget(name: name));
               });
             },
           );
