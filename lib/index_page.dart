@@ -14,6 +14,8 @@ import 'shared_axis_transition_page.dart';
 import 'animation_controller_page.dart';
 import 'tween_staggered_page.dart';
 
+import 'pages/todos_list_page_stateful_widget.dart';
+
 class IndexPage extends StatelessWidget {
   const IndexPage({
     Key? key,
@@ -164,6 +166,19 @@ class IndexPage extends StatelessWidget {
                 );
               },
               child: const Text('TweenStaggeredPage'),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) {
+                    return TodosListPageStatefulWidget();
+                  }),
+                );
+              },
+              child: const Text('TodosListPageStatefulWidget'),
             ),
           ),
         ],
